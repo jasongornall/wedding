@@ -1,0 +1,55 @@
+html {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+html #front-background {
+  background-image: url("../images/background-front.png");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center bottom;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+html #body {
+  position: relative;
+  z-index: 100;
+}
+html #body .main-header {
+  font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;
+  color: #fff;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-top: 75px;
+  font-size: 90px;
+  height: 1em;
+}
+html #body #navigation {
+  text-align: center;
+}
+html #body #navigation > a {
+  color: #fff;
+  margin: 0 10px;
+}
+html #body #navigation > a:hover {
+  color: #ffd700;
+}
+html #body #routes {
+  position: relative;
+  z-index: 10;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background: rgba(0,0,0,0.4);
+}
+html #body #routes [data-route = "/rsvp"] iframe {
+  width: 800px;
+  height: 1675px;
+  max-width: 100%;
+}
