@@ -2,7 +2,11 @@
 <html>
   <head>
     <script type="text/javascript">
-      document.write("<base href='"+ window.location.protocol +'//' + window.location.host + "' >");
+      if (window.location.host == "jasongornall.github.io") {
+        document.write("<base href='"+ 'https://jasongornall.github.io/wedding/' + "' >");
+      } else {
+        document.write("<base href='"+ window.location.protocol +'//' + window.location.host + "' >");
+      }
     </script>
     <script>
       (function(){
