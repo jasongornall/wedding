@@ -17,14 +17,17 @@ handleLink = function() {
 };
 
 route_url = function(path) {
-  var data, new_path;
+  var $link, data, new_path;
   $('#body').attr('class', '');
   path = path || url('path');
   data = path.split('/');
   history.replaceState(null, null, path);
   new_path = "/" + data[1];
   $("[data-route]").hide();
-  return $("[data-route='" + new_path + "']").fadeIn();
+  $("[data-route='" + new_path + "']").fadeIn();
+  $link = $("#navigation a[href='" + new_path + "']");
+  $link.addClass('active');
+  return $link.siblings().removeClass('active');
 };
 
 route_url();

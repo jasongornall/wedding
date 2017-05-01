@@ -21,5 +21,9 @@ route_url = (path) ->
   $("[data-route]").hide()
   $("[data-route='#{new_path}']").fadeIn()
 
+  $link = $("#navigation a[href='#{new_path}']")
+  $link.addClass 'active'
+  $link.siblings().removeClass 'active'
+
 route_url()
 handleLink()

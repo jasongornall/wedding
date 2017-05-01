@@ -2,7 +2,11 @@
 <html>
   <head>
     <script type="text/javascript">
-      document.write("<base href='"+ window.location.protocol +'//' + window.location.host + "' >");
+      if (window.location.host == "jasongornall.github.io") {
+        document.write("<base href='"+ 'https://jasongornall.github.io/wedding/' + "' >");
+      } else {
+        document.write("<base href='"+ window.location.protocol +'//' + window.location.host + "' >");
+      }
     </script>
     <script>
       (function(){
@@ -16,20 +20,19 @@
     <link type="text/css" rel="stylesheet" href="stylesheets/font-awesome.css" />
     <link type="text/css" rel="stylesheet" href="stylesheets/main.css">
     <link type="text/css" rel="stylesheet" href="stylesheets/fireflies.css">
-    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
 
 
 
 
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
-    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="libs/teacup.js"></script>
     <script src="libs/teacup-config.js"></script>
     <script src="libs/async.min.js"></script>
     <script src="libs/url.min.js"></script>
-    <script src="libs/jquery.history"></script>
+    <script src="libs/jquery.history.js"></script>
   </head>
 
 
@@ -46,21 +49,61 @@
       </div>
 
       <div id="navigation">
-        <a href= "/"> Home </a>
-        <a href= "/rsvp"> RSVP </a>
-        <a href= "/registery"> Registery </a>
-        <a href= "/wedding-location"> Wedding Location </a>
-        <a href= "/accomodations"> Accomodations </a>
-        <a href= "/faq"> FAQ </a>
+        <a href= "/">Home</a>
+        <a href= "/story">Our Story</a>
+        <a href= "/rsvp">RSVP</a>
+        <a href= "/registery">Registery</a>
+        <a href= "/wedding-location">Wedding Location</a>
+        <a href= "/accomodations">Accomodations</a>
+        <a href= "/faq">FAQ</a>
       </div>
 
+
       <div id = "routes">
+        <div data-route = "/accomodations">
+          <p>
+            We Recommend
+            <a href="http://www.innbytheseaatlajolla.com/">
+              Inn By The Sea
+            </a>
+            We have blocked off several rooms so be sure to mention Seener Wedding party when you book
+          </p>
+          <p>
+            There are many other options in the area. Please feel free to pick what works best for you!
+          </p>
+          <img src = "https://images.trvl-media.com/hotels/1000000/10000/1800/1705/38762ce4_z.jpg">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4242.911479598752!2d-117.27787907678062!3d32.844534672685235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc03fb3ca8fa9b%3A0x711487906f7fbee8!2sInn+by+the+Sea+at+La+Jolla!5e0!3m2!1sen!2sus!4v1493597410851" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
         <div data-route = "/rsvp">
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnzjaUn-OTKvu9CGiL_WKIPJH49a7ZumEQlbh101EysEaxRA/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>
 
         <div data-route = "/">
-            zzz
+          <h1> Welcome to Our Wedding site!</h1>
+        </div>
+
+        <div data-route = "/wedding-location">
+
+            <div class = "section">
+              <h1> Ceremony </h1>
+              <p>
+               The Ceremony takes place at <a href= "https://www.sandiego.gov/park-and-recreation/parks/regional/shoreline/cuvier"> Cuvier Park </a>. It's a small park that overlooks the ocean outside. We will have chairs and sunglasses available. This will be where everyone first meets at 4:30. If you arn't sure where to go feel free to ask someone or just follow the hearts!
+               <img src = '../images/heart.png' class = "one" style = "vertical-align: top;height: 30px;">
+              </p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10916.375074789657!2d-117.28318143214132!3d32.84443710871668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc03effcd61cf7%3A0xbd3360831e4acdcb!2sCuvier+Park!5e0!3m2!1sen!2sus!4v1493596032990"  height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class = "section">
+              <h1> Reception </h1>
+              <p>
+                After the ceremony we will take a .3 mile walk (can arrange transporation) to the Reception at
+                <a href= "http://cuvierclub.com/"> Cuvier Club </a>. A full dinner will be provided with alcholic beverages and appetizers (don't eat before hand)!
+              </p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1676.0268957053304!2d-117.2792683919769!3d32.843827398702665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x80dc03effcd61cf7%3A0xbd3360831e4acdcb!2sCuvier+Park%2C+590+Coast+Blvd+S%2C+La+Jolla%2C+CA+92037!3m2!1d32.8435225!2d-117.28002819999999!4m5!1s0x80dc03e52a93be8f%3A0x61b40b925e731938!2sCuvier+Club+Ballroom%2C+7776+Eads+Ave%2C+La+Jolla%2C+CA+92037!3m2!1d32.844198!2d-117.27668299999999!5e0!3m2!1sen!2sus!4v1493596339673"  height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div data-route = "/story">
+            Chelsea and Jason met through Chelsea's undergraduate college friend, Jason Cung (or Jason #1).
+            Chelsea would go up to San Francisco to visit Jason #1 and her other friends. It just so happened that on her first trip to visit her best friend Andy after he got a new job, Jason #1 and Chelsea met up for karaoke at The Mint. Jason #1 said he was expecting his “twin,” Jason #2 (of course Jason Gornall) to meet them there, but he was running late. Jason #2 showed up right after Jason #1 and Chelsea finished their cheesy duet of “A Whole New World,” which became the joke of the trip. But Chelsea made it up to Jason #2, singing “Nature Boy” at a piano bar called Martunies, which she found out later was in one of Jason #2's favorite movies, Moulin Rouge. At that moment, Jason #2 fell for Chelsea hearing her sing that song. After that moment, and some flirting over who would pay for the drinks (Jason #2 won that battle, but Chelsea got him back afterward by paying for his pizza), the two became friends on Facebook as usual. Chelsea flew back to San Diego, and Jason #2 continued his life in the bay area, both thinking that current relationships and distance would get in the way of destiny. However, destiny was carving a different path than they thought. Chelsea returned to San Francisco six months later to again visit her best friend Andy and her college bud Jason #1. Jason #1 again invited Jason #2 out to join them for the reunion, and again Chelsea and Jason #2 bonded as he tried to prevent her from crossing the street without a walk signal, becoming another joke between them. Again, Chelsea went back to San Diego with some big decisions ahead applying to graduate programs, and Jason #2 continued his work up in San Francisco. Finally, in early February 2014, destiny got a check mate. Chelsea returned to San Francisco for an audition at the conservatory and a reunion with her friends, one stop on her eight-school audition trip across the country. Not knowing where she would end up, Chelsea wasn't looking to start a relationship but it seemed that Jason #2 and Chelsea just clicked every time they saw each other. This time, both didn't want to say goodbye as Chelsea joked with Jason #2, “Goodbye forever!,” and texted him a picture of her plane wing as she flew home. However, they couldn't stop texting and talking. The following week, Chelsea flew to Chicago for her next school audition. It was Valentine's Day, and Chelsea's flight home from Chicago was canceled due to a blizzard, and Chelsea and Jason #2 spent 7 hours video chatting over Skype while she was stuck at the hotel. “Well, I guess it's single awareness day,” Chelsea joked with Jason #2, but he just responded that it didn't have to be single awareness day. Instead he said told Chelsea that he liked her and would want to pursue a relationship with her, even though she wasn't sure where she might end up. Chelsea then said that she liked him too. However, Chelsea said if he was serious in being with her and potentially being in a long distance relationship, he should meet up with her on her final audition trip in New York. So Jason #2, committed to being with her, flew across the country and met her in New York for their first official “date” together as a couple, and Jason #2 became her Jason #1. The story of destiny continues from there. Chelsea ended up choosing to go to Boston University, and Jason knowing he wanted to be with her, moved with her. Now they are permanently stuck together because they adopted their cat...oh and are getting married of course!
         </div>
       </div>
     </div>

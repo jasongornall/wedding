@@ -39,6 +39,9 @@ html #body #navigation > a {
 html #body #navigation > a:hover {
   color: #ffd700;
 }
+html #body #navigation > a.active {
+  color: #ffd700;
+}
 html #body #routes {
   position: relative;
   z-index: 10;
@@ -46,10 +49,41 @@ html #body #routes {
   max-width: 800px;
   margin: 0 auto;
   margin-top: 100px;
-  background: rgba(0,0,0,0.4);
+}
+html #body #routes [data-route] {
+  background: rgba(0,0,0,0.7);
+}
+html #body #routes a {
+  color: #ffd700;
 }
 html #body #routes [data-route = "/rsvp"] iframe {
   width: 800px;
-  height: 1675px;
+  height: 1772px;
   max-width: 100%;
+}
+html #body #routes [data-route = "/accomodations"] p {
+  padding: 10px;
+}
+html #body #routes [data-route = "/accomodations"] iframe,
+html #body #routes [data-route = "/accomodations"] img {
+  display: block;
+  width: 100%;
+}
+html #body #routes [data-route = "/wedding-location"] {
+  background: none;
+}
+html #body #routes [data-route = "/wedding-location"] .section {
+  background: rgba(0,0,0,0.7);
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+html #body #routes [data-route = "/wedding-location"] h1 {
+  margin-top: 0px;
+}
+html #body #routes [data-route = "/wedding-location"] p {
+  margin-bottom: 10px;
+}
+html #body #routes [data-route = "/wedding-location"] iframe {
+  width: 100%;
 }
