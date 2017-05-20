@@ -1,7 +1,6 @@
 $active = gold
 $text_color = white
 
-
 html
   background-image: url('../images/background.jpg')
   background-size: cover;
@@ -9,6 +8,12 @@ html
   width: 100%;
   background-position: center bottom;
   background-attachment: fixed
+  &::-webkit-scrollbar
+    width 7px
+  &::-webkit-scrollbar-thumb
+    background-color $active
+  &::-webkit-scrollbar-track
+    background-color $text_color
   #front-background
     background-image: url('../images/background-front.png')
     background-size: cover;
@@ -18,6 +23,7 @@ html
     position fixed
     top 0
     left 0
+
 
   #body
     position relative
@@ -29,7 +35,6 @@ html
       text-align: center;
       padding-top: 75px;
       font-size 90px
-      height: 1em;
 
     #navigation
       text-align center
@@ -56,7 +61,7 @@ html
       [data-route = "/rsvp"]
         iframe
           width 800px
-          height 1772px
+          height 1790px
           max-width 100%
       [data-route = "/accomodations"]
         p
@@ -80,3 +85,7 @@ html
           width 100%
 
 
+@media (max-width: 800px)
+  html #body .main-header
+    font-size: 50px;
+    margin-bottom: 30px;

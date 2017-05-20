@@ -6,6 +6,15 @@ html {
   background-position: center bottom;
   background-attachment: fixed;
 }
+html::-webkit-scrollbar {
+  width: 7px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #ffd700;
+}
+html::-webkit-scrollbar-track {
+  background-color: #fff;
+}
 html #front-background {
   background-image: url("../images/background-front.png");
   background-size: cover;
@@ -27,7 +36,6 @@ html #body .main-header {
   text-align: center;
   padding-top: 75px;
   font-size: 90px;
-  height: 1em;
 }
 html #body #navigation {
   text-align: center;
@@ -58,7 +66,7 @@ html #body #routes a {
 }
 html #body #routes [data-route = "/rsvp"] iframe {
   width: 800px;
-  height: 1772px;
+  height: 1790px;
   max-width: 100%;
 }
 html #body #routes [data-route = "/accomodations"] p {
@@ -86,4 +94,10 @@ html #body #routes [data-route = "/wedding-location"] p {
 }
 html #body #routes [data-route = "/wedding-location"] iframe {
   width: 100%;
+}
+@media (max-width: 800px) {
+  html #body .main-header {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
 }
