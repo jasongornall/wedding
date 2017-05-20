@@ -28,6 +28,7 @@ html #front-background {
 html #body {
   position: relative;
   z-index: 100;
+  text-align: center;
 }
 html #body .main-header {
   font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;
@@ -40,6 +41,11 @@ html #body .main-header {
 }
 html #body #navigation {
   text-align: center;
+  background: rgba(0,0,128,0.55);
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  border-radius: 13px;
 }
 html #body #navigation > a {
   color: #fff;
@@ -52,6 +58,7 @@ html #body #navigation > a.active {
   color: #ffd700;
 }
 html #body #routes {
+  text-align: left;
   position: relative;
   z-index: 10;
   color: #fff;
