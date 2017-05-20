@@ -70,7 +70,6 @@ html #body #routes [data-route= "/story"] {
 }
 html #body #routes [data-route= "/story"] h1 {
   text-align: center;
-  text-decoration: underline;
   color: #ffd700;
   font: 400 48px/0.8 'Cookie', Helvetica, sans-serif;
   margin: 0;
