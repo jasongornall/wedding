@@ -24,7 +24,10 @@ html
     top 0
     left 0
 
-
+  h1
+    padding: 20px 10px;
+    text-align: center;
+    margin 0
   #body
     position relative
     z-index 100
@@ -63,6 +66,7 @@ html
       margin-top: 60px;
       [data-route]
         background rgba(0,0,0,.7)
+        display none
       a
         color gold
       [data-route= "/story"]
@@ -88,12 +92,28 @@ html
           height 1790px
           max-width 100%
       [data-route = "/accomodations"]
+
         p
           padding 10px
         iframe, img
           display block
           width 100%
+      [data-route = "/registery"]
 
+        img
+          float left
+          width 120px
+        .row
+          display table-row
+
+        .cell
+          display table-cell
+          vertical-align middle
+          text-align left
+          padding 10px
+          img
+            margin: 0 auto;
+            display: block;
       [data-route = "/wedding-location"]
         background none
         .section
@@ -101,8 +121,7 @@ html
           margin-bottom 20px
           padding 10px
           box-sizing border-box
-        h1
-          margin-top 0px
+
         p
           margin-bottom 10px
         iframe
@@ -110,6 +129,13 @@ html
 
 
 @media (max-width: 800px)
-  html #body .main-header
-    font-size: 50px;
-    margin-bottom: 30px;
+  html #body
+    .main-header
+      font-size: 50px;
+      margin-bottom: 30px;
+    #navigation > a
+      padding: 10px;
+      line-height: 20px;
+      margin 0
+      display: inline-block
+

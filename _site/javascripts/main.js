@@ -22,7 +22,7 @@ route_url = function(path) {
   path = path || url('path');
   data = path.split('/');
   history.replaceState(null, null, path);
-  new_path = "/" + data[1];
+  new_path = "/" + (data[1] || '');
   $("[data-route]").hide();
   $("[data-route='" + new_path + "']").fadeIn();
   $link = $("#navigation a[href='" + new_path + "']");
