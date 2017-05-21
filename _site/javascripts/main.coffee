@@ -8,6 +8,15 @@ handleLink = ->
     route_url(path or '/')
     return false
 
+handlePath = (path) ->
+  console.log path, '123'
+  switch path
+    when '/'
+      return console.log 'a'
+      $('.rewrite').typeIt({
+        strings: ['Enter your string here!', 'Another string!']
+        breakLines: true
+      });
 
 route_url = (path) ->
   $('#body').attr('class','')
@@ -18,6 +27,8 @@ route_url = (path) ->
 
   new_path = "/#{data[1] or ''}"
 
+  handlePath new_path
+
   $("[data-route]").hide()
   $("[data-route='#{new_path}']").fadeIn()
 
@@ -27,3 +38,5 @@ route_url = (path) ->
 
 route_url()
 handleLink()
+
+

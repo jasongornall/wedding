@@ -1,10 +1,5 @@
 html {
-  background-image: url("../images/background.jpg");
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  background-position: center bottom;
-  background-attachment: fixed;
+  background: #000;
 }
 html::-webkit-scrollbar {
   width: 7px;
@@ -15,15 +10,12 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-track {
   background-color: #fff;
 }
-html #front-background {
-  background-image: url("../images/background-front.png");
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  background-position: center bottom;
+html .mask {
   position: fixed;
+  left: 50%;
+  transform: translate(-50%);
   top: 0;
-  left: 0;
+  overflow: hidden;
 }
 html h1 {
   padding: 20px 10px;
@@ -40,9 +32,9 @@ html #body .main-header {
   color: #fff;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
   text-align: center;
-  padding-top: 75px;
-  font-size: 90px;
+  font-size: 75px;
   margin-bottom: 20px;
+  padding-top: 27px;
 }
 html #body #navigation {
   text-align: center;
@@ -51,6 +43,7 @@ html #body #navigation {
   text-align: center;
   padding: 10px;
   border-radius: 13px;
+  margin-top: 130px;
 }
 html #body #navigation > a {
   color: #fff;
@@ -148,11 +141,23 @@ html #body #routes [data-route = "/wedding-location"] iframe {
   html #body .main-header {
     font-size: 50px;
     margin-bottom: 30px;
+    padding-top: 25px;
+  }
+  html #body #navigation {
+    margin-top: 130px;
   }
   html #body #navigation > a {
     padding: 10px;
     line-height: 20px;
     margin: 0;
     display: inline-block;
+  }
+}
+@media (max-width: 536px) {
+  html #body .main-header {
+    padding-top: 15px;
+  }
+  html #body #navigation {
+    margin-top: 100px;
   }
 }

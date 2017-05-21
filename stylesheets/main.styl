@@ -2,27 +2,19 @@ $active = gold
 $text_color = white
 
 html
-  background-image: url('../images/background.jpg')
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  background-position: center bottom;
-  background-attachment: fixed
+  background black
   &::-webkit-scrollbar
     width 7px
   &::-webkit-scrollbar-thumb
     background-color $active
   &::-webkit-scrollbar-track
     background-color $text_color
-  #front-background
-    background-image: url('../images/background-front.png')
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    background-position: center bottom;
-    position fixed
-    top 0
-    left 0
+  .mask
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0;
+    overflow: hidden;
 
   h1
     padding: 20px 10px;
@@ -37,17 +29,18 @@ html
       color: #fff;
       text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
       text-align: center;
-      padding-top: 75px;
-      font-size 90px
+      font-size 75px
       margin-bottom 20px
+      padding-top: 27px;
 
     #navigation
       text-align center
-      background: rgba(0, 0, 128, 0.55);
+      background: rgba(0,0,128,0.55);
       display: inline-block;
       text-align: center;
       padding: 10px;
       border-radius: 13px;
+      margin-top: 130px;
       > a
         color white
         margin 0 10px;
@@ -133,9 +126,20 @@ html
     .main-header
       font-size: 50px;
       margin-bottom: 30px;
-    #navigation > a
-      padding: 10px;
-      line-height: 20px;
-      margin 0
-      display: inline-block
+      padding-top 25px
+    #navigation
+      margin-top 130px
+      > a
+        padding: 10px;
+        line-height: 20px;
+        margin 0
+        display: inline-block
+
+@media (max-width: 536px)
+  html #body
+    .main-header
+      padding-top 15px
+    #navigation
+      margin-top 100px
+
 
