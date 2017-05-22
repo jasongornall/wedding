@@ -13,10 +13,10 @@ handlePath = (path, $base_el) ->
   switch path
     when '/'
       $el = $base_el.find('.rewrite')
-      $base_el.find('.additions').remove
+      $base_el.find('.additions').remove()
       $el.lettering()
       $spans = $el.find('> span')
-      async.eachLimit $spans, 4, ((char, next) ->
+      async.eachLimit $spans, 2, ((char, next) ->
         $char = $ char
         x = Math.random() * 700 - 350
         y = Math.random() * 700 - 350

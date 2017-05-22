@@ -21,10 +21,10 @@ handlePath = function(path, $base_el) {
   switch (path) {
     case '/':
       $el = $base_el.find('.rewrite');
-      $base_el.find('.additions').remove;
+      $base_el.find('.additions').remove();
       $el.lettering();
       $spans = $el.find('> span');
-      return async.eachLimit($spans, 4, (function(char, next) {
+      return async.eachLimit($spans, 2, (function(char, next) {
         var $char, x, y;
         $char = $(char);
         x = Math.random() * 700 - 350;
