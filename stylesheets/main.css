@@ -140,14 +140,14 @@ html #body #routes [data-route = "/rsvp"] iframe {
   height: 1790px;
   max-width: 100%;
 }
-html #body #routes [data-route = "/faq"] {
+html #body #routes [data-route = "/important-information"] {
   padding: 20px;
 }
-html #body #routes [data-route = "/faq"] .question {
+html #body #routes [data-route = "/important-information"] .question {
   color: #ffd700;
   font-size: 20px;
 }
-html #body #routes [data-route = "/faq"] .answer {
+html #body #routes [data-route = "/important-information"] .answer {
   line-height: 1.3em;
   color: #fff;
   margin-bottom: 30px;
@@ -176,20 +176,20 @@ html #body #routes [data-route = "/accomodations"] img {
 html #body #routes [data-route = "/accomodations"] iframe {
   width: 100%;
 }
-html #body #routes [data-route = "/registery"] img {
+html #body #routes [data-route = "/registry"] img {
   float: left;
   width: 120px;
 }
-html #body #routes [data-route = "/registery"] .row {
+html #body #routes [data-route = "/registry"] .row {
   display: table-row;
 }
-html #body #routes [data-route = "/registery"] .cell {
+html #body #routes [data-route = "/registry"] .cell {
   display: table-cell;
   vertical-align: middle;
   text-align: left;
   padding: 10px;
 }
-html #body #routes [data-route = "/registery"] .cell img {
+html #body #routes [data-route = "/registry"] .cell img {
   margin: 0 auto;
   display: block;
 }
