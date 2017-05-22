@@ -131,6 +131,18 @@ html #body #routes [data-route = "/rsvp"] iframe {
   height: 1790px;
   max-width: 100%;
 }
+html #body #routes [data-route = "/faq"] {
+  padding: 20px;
+}
+html #body #routes [data-route = "/faq"] .question {
+  color: #ffd700;
+  font-size: 20px;
+}
+html #body #routes [data-route = "/faq"] .answer {
+  line-height: 1.3em;
+  color: #fff;
+  margin-bottom: 10px;
+}
 html #body #routes [data-route = "/accomodations"] h1 {
   text-align: left;
 }
