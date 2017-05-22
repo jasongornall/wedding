@@ -23,7 +23,8 @@ html h1 {
   text-align: left;
   margin: 0;
 }
-html p {
+html p,
+html li {
   line-height: 1.4em;
 }
 html #body {
