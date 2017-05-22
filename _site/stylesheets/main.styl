@@ -60,6 +60,32 @@ html
       [data-route]
         background rgba(0,0,0,.7)
         display none
+        .rewrite
+          > span
+            transition all 1s
+            opacity 0
+            display: inline-block;
+            &.show
+              transform: translate(0, 0) !important
+              opacity 1 !important
+        .additions
+          color $active
+          font-size: 30px;
+          margin-top: 20px;
+          display: block;
+          padding: 10px;
+          text-align center
+
+      [data-route="/"]
+        .rewrite
+          text-align: center;
+          margin: 0;
+          max-width: 300px;
+          margin: 0 auto;
+          height: auto;
+          padding-top: 30px;
+          > span
+            min-width: 0.4em;
       a
         color gold
       [data-route= "/story"]

@@ -68,6 +68,34 @@ html #body #routes [data-route] {
   background: rgba(0,0,0,0.7);
   display: none;
 }
+html #body #routes [data-route] .rewrite > span {
+  transition: all 1s;
+  opacity: 0;
+  display: inline-block;
+}
+html #body #routes [data-route] .rewrite > span.show {
+  transform: translate(0, 0) !important;
+  opacity: 1 !important;
+}
+html #body #routes [data-route] .additions {
+  color: #ffd700;
+  font-size: 30px;
+  margin-top: 20px;
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+html #body #routes [data-route="/"] .rewrite {
+  text-align: center;
+  margin: 0;
+  max-width: 300px;
+  margin: 0 auto;
+  height: auto;
+  padding-top: 30px;
+}
+html #body #routes [data-route="/"] .rewrite > span {
+  min-width: 0.4em;
+}
 html #body #routes a {
   color: #ffd700;
 }

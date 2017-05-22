@@ -8,15 +8,33 @@ handleLink = ->
     route_url(path or '/')
     return false
 
-handlePath = (path) ->
-  console.log path, '123'
+handlePath = (path, $base_el) ->
+
   switch path
     when '/'
-      return console.log 'a'
-      $('.rewrite').typeIt({
-        strings: ['Enter your string here!', 'Another string!']
-        breakLines: true
-      });
+      $el = $base_el.find('.rewrite')
+      $base_el.find('.additions').remove
+      $el.lettering()
+      $spans = $el.find('> span')
+      async.eachLimit $spans, 4, ((char, next) ->
+        $char = $ char
+        x = Math.random() * 700 - 350
+        y = Math.random() * 700 - 350
+        $char.attr {
+          'style': "transform: translate(#{x}px, #{y}px);"
+        }
+        setTimeout (->
+          $char.addClass 'show'
+          next()
+        ), 400
+      ), ->
+        $sub = $('<span class = "additions"> Welcome to Our Wedding Website </span>')
+        $sub.hide()
+        $base_el.append $sub
+        setTimeout ( ->
+          $sub.fadeIn()
+        ), 1000
+
 
 route_url = (path) ->
   $('#body').attr('class','')
@@ -27,10 +45,12 @@ route_url = (path) ->
 
   new_path = "/#{data[1] or ''}"
 
-  handlePath new_path
+
 
   $("[data-route]").hide()
-  $("[data-route='#{new_path}']").fadeIn()
+  $el = $("[data-route='#{new_path}']")
+  handlePath new_path, $el
+  $el.fadeIn()
 
   $link = $("#navigation a[href='#{new_path}']")
   $link.addClass 'active'
