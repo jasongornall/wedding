@@ -105,7 +105,7 @@ html #body #routes [data-route= "/story"] {
 html #body #routes [data-route= "/story"] p {
   display: block;
   position: relative;
-  height: 250px;
+  min-height: 250px;
 }
 html #body #routes [data-route= "/story"] h1 {
   text-align: center;
