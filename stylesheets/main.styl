@@ -64,6 +64,10 @@ html
         color gold
       [data-route= "/story"]
         padding 10px
+        p
+          display: block;
+          position: relative;
+          height: 250px;
         h1
           text-align center
           color $active
@@ -72,6 +76,7 @@ html
           padding 15px
         img
           max-width: 190px;
+          max-height 100%
           &.left
             padding-right 10px
             float left
@@ -85,12 +90,24 @@ html
           height 1790px
           max-width 100%
       [data-route = "/accomodations"]
-
+        h1
+          text-align left
+        hr
+          background $active
         p
           padding 10px
+        b
+          color $active
         iframe, img
           display block
+          max-width 100%
+          padding 0
+          margin 0
+          border 0
+          vertical-align top
+        iframe
           width 100%
+
       [data-route = "/registery"]
 
         img

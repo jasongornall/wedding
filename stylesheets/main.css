@@ -74,6 +74,11 @@ html #body #routes a {
 html #body #routes [data-route= "/story"] {
   padding: 10px;
 }
+html #body #routes [data-route= "/story"] p {
+  display: block;
+  position: relative;
+  height: 250px;
+}
 html #body #routes [data-route= "/story"] h1 {
   text-align: center;
   color: #ffd700;
@@ -83,6 +88,7 @@ html #body #routes [data-route= "/story"] h1 {
 }
 html #body #routes [data-route= "/story"] img {
   max-width: 190px;
+  max-height: 100%;
 }
 html #body #routes [data-route= "/story"] img.left {
   padding-right: 10px;
@@ -97,12 +103,28 @@ html #body #routes [data-route = "/rsvp"] iframe {
   height: 1790px;
   max-width: 100%;
 }
+html #body #routes [data-route = "/accomodations"] h1 {
+  text-align: left;
+}
+html #body #routes [data-route = "/accomodations"] hr {
+  background: #ffd700;
+}
 html #body #routes [data-route = "/accomodations"] p {
   padding: 10px;
+}
+html #body #routes [data-route = "/accomodations"] b {
+  color: #ffd700;
 }
 html #body #routes [data-route = "/accomodations"] iframe,
 html #body #routes [data-route = "/accomodations"] img {
   display: block;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  vertical-align: top;
+}
+html #body #routes [data-route = "/accomodations"] iframe {
   width: 100%;
 }
 html #body #routes [data-route = "/registery"] img {
