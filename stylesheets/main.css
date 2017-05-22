@@ -1,5 +1,6 @@
 html {
   background: #000;
+  font-family: Helvetica, Arial, Sans-Serif;
 }
 html::-webkit-scrollbar {
   width: 7px;
@@ -21,6 +22,9 @@ html h1 {
   padding: 20px 10px;
   text-align: left;
   margin: 0;
+}
+html p {
+  line-height: 1.4em;
 }
 html #body {
   position: relative;
@@ -48,6 +52,7 @@ html #body #navigation {
 html #body #navigation > a {
   color: #fff;
   margin: 0 10px;
+  text-decoration: none;
 }
 html #body #navigation > a:hover {
   color: #ffd700;
@@ -67,6 +72,9 @@ html #body #routes {
 html #body #routes [data-route] {
   background: rgba(0,0,0,0.7);
   display: none;
+}
+html #body #routes [data-route] .rewrite {
+  font: 400 37px/1.2 'Cookie', Helvetica, sans-serif;
 }
 html #body #routes [data-route] .rewrite > span {
   transition: all 1s;
@@ -141,7 +149,7 @@ html #body #routes [data-route = "/faq"] .question {
 html #body #routes [data-route = "/faq"] .answer {
   line-height: 1.3em;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 html #body #routes [data-route = "/accomodations"] h1 {
   text-align: left;

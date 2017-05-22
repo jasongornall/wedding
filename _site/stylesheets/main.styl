@@ -3,6 +3,7 @@ $text_color = white
 
 html
   background black
+  font-family: Helvetica, Arial, Sans-Serif;
   &::-webkit-scrollbar
     width 7px
   &::-webkit-scrollbar-thumb
@@ -20,6 +21,8 @@ html
     padding: 20px 10px;
     text-align: left;
     margin 0
+  p
+    line-height 1.4em
   #body
     position relative
     z-index 100
@@ -41,9 +44,11 @@ html
       padding: 10px;
       border-radius: 13px;
       margin-top: 130px;
+
       > a
         color white
         margin 0 10px;
+        text-decoration none
         &:hover
           color $active
         &.active
@@ -61,6 +66,7 @@ html
         background rgba(0,0,0,.7)
         display none
         .rewrite
+          font: 400 37px/1.2 'Cookie', Helvetica, sans-serif;
           > span
             transition all 1s
             opacity 0
@@ -123,7 +129,7 @@ html
         .answer
           line-height 1.3em
           color white
-          margin-bottom 10px
+          margin-bottom 30px
       [data-route = "/accomodations"]
         h1
           text-align left
