@@ -8,7 +8,17 @@ handleLink = ->
     route_url(path or '/')
     return false
 
+timeouts = []
+turnOnFireflies = ->
+  return if window.fireflies_on
+  initialize()
+  setInterval(draw,rint);
+  $(window).off('resize').on('resize', initialize);
+  window.fireflies_on = true
+
 handlePath = (path, $base_el) ->
+  while timeouts.length
+    clearTimeout timeouts.pop()
 
   switch path
     when '/'
@@ -18,22 +28,30 @@ handlePath = (path, $base_el) ->
       $spans = $el.find('> span')
       async.eachLimit $spans, 2, ((char, next) ->
         $char = $ char
-        x = Math.random() * 700 - 350
-        y = Math.random() * 700 - 350
+        width = window.innerWidth / 3
+        height = window.innerHeight / 3
+        x = Math.random() * width  - width / 2
+        y = Math.random() * height - height / 2
         $char.attr {
-          'style': "transform: translate(#{x}px, #{y}px);"
+          'style': "left: #{x}px; top: #{y}px;"
         }
-        setTimeout (->
+        timeouts.push setTimeout (->
           $char.addClass 'show'
           next()
         ), 400
       ), ->
-        $sub = $('<span class = "additions"> Welcome to Our Wedding Website </span>')
-        $sub.hide()
+        $sub = $('<div class = "additions"> Welcome to Our Wedding Website </div>')
         $base_el.append $sub
-        setTimeout ( ->
-          $sub.fadeIn()
+        timeouts.push setTimeout ( ->
+          $sub.fadeIn 'slow', ->
+
+            # turn on fireflies
+            turnOnFireflies()
         ), 1000
+    else
+
+      # turn on fireflies
+      turnOnFireflies()
 
 
 route_url = (path) ->
@@ -44,9 +62,6 @@ route_url = (path) ->
   history.replaceState(null, null, path);
 
   new_path = "/#{data[1] or ''}"
-
-
-
   $("[data-route]").hide()
   $el = $("[data-route='#{new_path}']")
   handlePath new_path, $el
@@ -56,7 +71,9 @@ route_url = (path) ->
   $link.addClass 'active'
   $link.siblings().removeClass 'active'
 
-route_url()
 handleLink()
+$(window).load ->
+  route_url()
+
 
 

@@ -20,13 +20,10 @@ function initialize() {
   }
 }
 
-$(document).ready(function(){
-  initialize()
-  setInterval(draw,rint);
-  $(window).off('resize').on('resize', initialize);
-});
-
 function draw() {
+  if (window.paused) {
+    return;
+  }
   con.clearRect(0,0,WIDTH,HEIGHT);
   for(var i = 0; i < pxs.length; i++) {
     pxs[i].fade();

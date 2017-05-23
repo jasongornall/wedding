@@ -3,7 +3,7 @@ $text_color = white
 
 html
   background black
-  font-family: Helvetica, Arial, Sans-Serif;
+  font-family: Sans-Serif, Arial, Helvetica;
   &::-webkit-scrollbar
     width 7px
   &::-webkit-scrollbar-thumb
@@ -70,15 +70,17 @@ html
           > span
             transition all 1s
             opacity 0
-            display: inline-block;
+            display: inline;
+            position relative
             &.show
-              transform: translate(0, 0) !important
+              top: 0 !important
+              left: 0 !important
               opacity 1 !important
         .additions
           color $active
           font-size: 30px;
           margin-top: 20px;
-          display: block;
+          display: none;
           padding: 10px;
           text-align center
 
