@@ -1,3 +1,9 @@
+mobileAndTabletcheck = ->
+  if /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    return true
+  else
+    return false
+
 handleLink = ->
   $('a').off('click').on 'click', (e) ->
     $el = $ e.currentTarget
@@ -10,6 +16,7 @@ handleLink = ->
 
 timeouts = []
 turnOnFireflies = ->
+  return if mobileAndTabletcheck()
   return if window.fireflies_on
   initialize()
   setInterval(draw,rint);
