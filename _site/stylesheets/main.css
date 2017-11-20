@@ -95,6 +95,7 @@ html #body #routes [data-route] .additions {
   display: none;
   padding: 10px;
   text-align: center;
+  font: 400 37px/1.2 'Cookie', Helvetica, sans-serif;
 }
 html #body #routes [data-route="/"] .rewrite {
   text-align: center;
